@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="">
+        <meta name="keywords" content="アフターピル,低容量ピル,オンライン,遠隔診療,ライン診療">
+        <link rel="stylesheet" href="./css/slick.css">
+        <link rel="stylesheet" href="css/style.css?5522444555">
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+        <link rel="stylesheet" href="./css/jquery.steps.css">
+        <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="utf-8"></script>
+        <title>来院予約フォーム</title>
+
+        <meta name="format-detection" content="telephone=no" />
+
+        <script>
+                (function (d) {
+                        var config = {
+                                kitId: 'lcy4fdg',
+                                scriptTimeout: 3000,
+                                async: true
+                        },
+                                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+                })(document);
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167969557-1"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-167969557-1');
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Ads: 824377490 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-824377490"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'AW-824377490');
+        </script>
+
+        <!-- User Heat Tag -->
+        <script type="text/javascript">
+                (function (add, cla) { window['UserHeatTag'] = cla; window[cla] = window[cla] || function () { (window[cla].q = window[cla].q || []).push(arguments) }, window[cla].l = 1 * new Date(); var ul = document.createElement('script'); var tag = document.getElementsByTagName('script')[0]; ul.async = 1; ul.src = add; tag.parentNode.insertBefore(ul, tag); })('//uh.nakanohito.jp/uhj2/uh.js', '_uhtracker'); _uhtracker({ id: 'uhCiNaJU65' });
+        </script>
+        <!-- End User Heat Tag -->
+</head>
+<body>
+        <div class="wrapper">
+                <header class="header header-pages">
+                        <div class="contents flex al-cent">
+
+
+                                <div class="header__logo_sub header-pages__sub">
+                                        <span class="pc">医療法人社団 創輝会グループ</span>
+                                        <img src="./img/pages_header_sub_text_sp.svg" alt="医療法人社団 創輝会グループ" class="sp">
+                                </div>
+
+
+                                <div class="header__logo header-pages__logo"> <a href="./">
+                                                <img src="./img/logo_pages.png" alt="ピル処方窓口" class=""></a>
+                                </div>
+
+                                <div class="header__tel header-pages__tel f-furura pc-dis">
+                                        <a href="./tel/online.html" class="tel_link pages__tel">
+                                                <p class="tel_link__num pages__tel__num">0120-900-794</p>
+                                                <p class="tel_link__time pages__tel__time">10:00-20:00</p>
+                                        </a>
+                                </div>
+                                <!-- ./header__tel -->
+
+                                <button class="trigger trigger--pages sp-dis" id="js-trigger">
+
+                                </button>
+
+                        </div>
+                        <!-- contents end -->
+                </header>
+
+                <div class="pages-fv">
+                        <div class="contents">
+
+                                <div class="pages-fv__catchs">
+                                        <p class="pages-fv__item pages-fv__item--pill01">
+                                                                <img src="./img/fv_item01.png" alt="">
+                                                        </p>
+
+                                        <p class="pages-fv__item pages-fv__item--pill02">
+                                                                                                        <img src="./img/fv_item02.png" alt="">
+                                                                                                </p>
+
+                                        <h1 class="pages-fv__ttl">
+                                                                                                       <img src="./img/fv_catch.png" alt="簡単5分で
+                                                                スピード処方">
+                                                                                               </h1>
+                                </div>
+
+                        </div>
+                </div>
+
+                <ul class="nav nav--pages" id="js-menu">
+                        <li class="nav__item">
+                                <a href="./index.html#link-01" class="nav__link">ピルについて</a>
+                        </li>
+                        <li class="nav__item">
+                                <a href="./index.html#link-02" class="nav__link">オンライン診療の流れ</a>
+                        </li>
+                        <li class="nav__item">
+                                <a href="./index.html#link-03" class="nav__link">よくある質問</a>
+                        </li>
+                        <li class="nav__item">
+                                <a href="./index.html#link-04" class="nav__link">当院について</a>
+                        </li>
+                </ul>
+
+                <div class="form" id="js-form">
+
+                        <form action="./visite-form-confilm.php" method="post" id="visit-form">
+
+                                <!-- 質問その１ -->
+                                <div class="form__content is-step-show" id="js-form-step01">
+
+
+                                        <h2
+                                                class="form_ttl"><span class="form_ttl__q f-furura">Q1.</span>ご希望されるピルを選んでください。</h2>
+
+                                        <div class="radio">
+
+                                                <input type="radio" value="アフターピル" name="ご希望のピル" class="radio_btn"
+                                                        id="pill01">
+                                                <label for="pill01" class="radio_label">アフターピル</label>
+                                                <input type="radio" value="低用量ピル" name="ご希望のピル" class="radio_btn"
+                                                        id="pill02">
+                                                <label for="pill02" class="radio_label">低用量ピル</label>
+                                        </div>
+                                        <!-- ./radio -->
+                                </div>
+                                <!-- ./form__content -->
+
+                                <!-- 質問その2 -->
+                                <div class="form__content" id="js-form-step02">
+
+
+                                        <h2
+                                                class="form_ttl"><span class="form_ttl__q f-furura">Q2.</span>来院歴はありますか？</h2>
+
+
+                                        <div class="radio">
+                                                <input type="radio" value="ある" name="来院歴" class="radio_btn" id="yes">
+                                                <label for="yes" class="radio_label">ある</label>
+                                                <input type="radio" value="なし" name="来院歴" class="radio_btn" id="no">
+                                                <label for="no" class="radio_label">なし</label>
+
+                                        </div>
+                                        <!-- ./radio -->
+                                </div>
+                                <!-- ./form__content -->
+
+                                <!-- 質問その3 -->
+                                <div class="form__content" id="js-form-step02-01">
+                                        <h2
+                                                class="form_ttl"><span class="form_ttl__q f-furura">Q3.</span>お住まいの地域をお選びください。</h2>
+
+                                        <div class="radio radio--area">
+
+                                                <input type="radio" value="北海道エリア" name="エリア選択" class="radio_btn"
+                                                        id="area01">
+                                                <label for="area01" class="radio_label radio_label--area">北海道エリア</label>
+                                                <input type="radio" value="関東エリア" name="エリア選択" class="radio_btn"
+                                                        id="area02">
+                                                <label for="area02" class="radio_label radio_label--area">関東エリア</label>
+                                                <input type="radio" value="関西エリア" name="エリア選択" class="radio_btn"
+                                                        id="area03">
+                                                <label for="area03" class="radio_label radio_label--area">関西エリア</label>
+                                                <input type="radio" value="九州エリア" name="エリア選択" class="radio_btn"
+                                                        id="area04">
+                                                <label for="area04" class="radio_label radio_label--area">九州エリア</label>
+
+                                        </div>
+                                        <!-- ./radio -->
+                                </div>
+                                <!-- ./form__content -->
+
+                                <!-- 質問その2 -->
+                                <div class="form__content" id="js-form-step02-02">
+
+
+                                        <h2
+                                                class="form_ttl"><span class="form_ttl__q f-furura">Q3.</span>あなたのことを教えてください</h2>
+
+                                        <div class="customer_info">
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="date">希望日時</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <span class="date-wrap">
+                                                                        <input type="text" id="date" name="希望日"
+                                                                                class="date required" autocomplete="off"
+                                                                                placeholder="2020年01月01日">
+                                                                </span>
+                                                                <p class="time-wrap">
+                                                                                <select name="希望時間(時)" id="time01" class="time01 required">
+                                                                                        <option value="">--</option>
+                                                                                        <option value="10">10</option>
+                                                                                        <option value="11">11</option>
+                                                                                        <option value="12">12</option>
+                                                                                        <option value="13">13</option>
+                                                                                        <option value="14">14</option>
+                                                                                        <option value="15">15</option>
+                                                                                        <option value="16">16</option>
+                                                                                        <option value="17">17</option>
+                                                                                        <option value="18">18</option>
+                                                                                        <option value="19">19</option>
+                                                                                        <option value="20">20</option>
+                                                                                </select>
+                                                                                時
+                                                                        </p>
+
+                                                                <p class="time-wrap">
+                                                                                 <select name="希望時間(分)" id="time02" class="time02 required">
+                                                                                                <option value="">--</option>
+                                                                                                <option value="00">00</option>
+                                                                                                <option value="10">10</option>
+                                                                                                <option value="20">20</option>
+                                                                                                <option value="30">30</option>
+                                                                                                <option value="40">40</option>
+                                                                                                <option value="50">50</option>
+                                                                                </select>分</p>
+
+                                                        </dd>
+
+                                                </dl>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="date">希望クリニック</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <select name="希望クリニック" class="clinic-select required"
+                                                                        id="clinic">
+                                                                        <option value="">選択してください</option>
+                                                                        <option value="渋谷駅前 レディースクリニック">渋谷駅前 レディースクリニック
+                                                                        </option>
+                                                                        <option value="池袋院 THE MEDICAL SALON">池袋院 THE
+                                                                                MEDICAL SALON</option>
+                                                                        <option value="新宿院 PICO BEAUTY CLINIC">新宿院 PICO
+                                                                                BEAUTY CLINIC</option>
+                                                                        <option value="仙台院 THE BEAUTY CLINIC">仙台院 THE
+                                                                                BEAUTY CLINIC</option>
+                                                                        <option value="心斎橋 レディースクリニック">心斎橋 レディースクリニック
+                                                                        </option>
+                                                                        <option value="神戸院 Dual Clinic">神戸院 Dual Clinic
+                                                                        </option>
+                                                                        <option value="札幌院 YAG BEAUTY CLINIC">札幌院 YAG
+                                                                                BEAUTY CLINIC</option>
+                                                                        <option value="福岡院 YAG BEAUTY CLINIC">福岡院 YAG
+                                                                                BEAUTY CLINIC</option>
+                                                                </select>
+                                                        </dd>
+                                                </dl>
+                                        </div>
+
+                                        <div class="btn_area btn_area--row02">
+
+                                                <p class="btn_send" id="js-to-step04">次へ</p>
+                                        </div>
+
+                                </div>
+                                <!-- ./form__content -->
+
+                                <!-- 質問その3 -->
+                                <div class="form__content" id="js-form-step03">
+                                        <h2
+                                                class="form_ttl"><span class="form_ttl__q f-furura">Q3.</span>あなたのことを教えてください</h2>
+
+                                        <div class="customer_info">
+
+                                                <dl class="form__row form__row--al_top">
+                                                        <dt class="form__label form__label--al_top">
+                                                                <label for="zip">住所</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <p class="form__p">
+                                                                        <input type="text" class="input-text input-short required" id="zip" name="郵便番号" autocomplete="off" onKeyUp="AjaxZip3.zip2addr(this,'','住所','住所');" placeholder="000-0000" >
+
+                                                                </p>
+                                                                <p class="form__p">
+                                                                        <input type="text" class="input-text required" id="address" name="住所" placeholder="郵便番号を入力したら住所が自動入力されます。">
+
+                                                                </p>
+                                                        </dd>
+                                                </dl>
+
+
+                                                <div class="form__col">
+                                                        <dl class="form__col_content">
+                                                                <dt class="form__col_label form__col_label--name">
+                                                                        <label for="name">名前</label>
+                                                                </dt>
+                                                                <dd class="form__col_input">
+                                                                        <input type="text" class="input-text required"
+                                                                                id="name" name="名前" placeholder="山田花子">
+
+                                                                </dd>
+                                                        </dl>
+
+                                                        <dl class="form__col_content">
+                                                                <dt class="form__col_label">
+                                                                        <label for="namekana">フリガナ</label>
+                                                                </dt>
+                                                                <dd class="form__col_input">
+                                                                        <input type="text" class="input-text required"
+                                                                                id="namekana" name="フリガナ"
+                                                                                placeholder="ヤマダハナコ">
+
+                                                                </dd>
+                                                        </dl>
+
+                                                </div>
+
+                                                <div class="form__col">
+                                                        <dl class="form__col_content">
+                                                                <dt class="form__col_label form__col_label--name">
+                                                                        <label for="height">身長</label>
+                                                                </dt>
+                                                                <dd class="form__col_input">
+                                                                        <input type="text" class="input-text required"
+                                                                                id="height" name="身長"
+                                                                                placeholder="00cm">
+
+                                                                </dd>
+                                                        </dl>
+
+                                                        <dl class="form__col_content">
+                                                                <dt class="form__col_label">
+                                                                        <label for="weight">体重</label>
+                                                                </dt>
+                                                                <dd class="form__col_input">
+                                                                        <input type="text" class="input-text required"
+                                                                                id="weight" name="体重"
+                                                                                placeholder="00kg">
+
+                                                                </dd>
+                                                        </dl>
+
+                                                </div>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="sex">性別</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <select name="性別" id="sex" class="sex required">
+                                                                        <option value="">選択</option>
+                                                                        <option value="女性">女性</option>
+                                                                        <option value="男性">男性</option>
+                                                                </select>
+
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="year">生年月日</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <p
+                                                                        class="input__col input__col--year input__col--year-p02">
+                                                        <select name="生年月日(年)" id="year" class="b_year required select"></select>年        </p>
+                                                                <p class="input__col input__col--month error-pos-sp-ad">
+                                                                        <select name="生年月日(月)" id="month" class="b_md required select">
+                                                                        <option value="">--</option>
+                                                                        </select>月
+
+                                                                                                        </p>
+                                                                <p class="input__col input__col--day error-pos-sp-ad">
+                                                                        <select name="生年月日(日)" id="day" class="b_md required select">
+                                                                        <option value="">--</option>
+                                                                        </select>日
+                                                                                                        </p>
+                                                                <p class="input__col input__col--age error-pos-sp-ad">
+                                                                <input type="text" class="age required" id="age">歳
+                                                                </p>
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="tel">電話番号</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="tel" class="input-text input-href required"
+                                                                        id="tel" name="電話番号" placeholder="0801111111">
+
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="mail">Eメール</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" class="input-text required" id="mail"
+                                                                        name="メールアドレス" placeholder="example@co.jp">
+
+                                                        </dd>
+                                                </dl>
+
+
+                                                <div class="btn_area btn_area--row02">
+                                                        <p class="btn_send" id="js-prev-step02-02">戻る</p>
+                                                        <p class="btn_send" id="js-to-step05">次へ</p>
+                                                </div>
+                                        </div>
+                                        <!-- ./customer_info -->
+                                </div>
+                                <!-- ./form__content -->
+
+                                <!-- 質問その4 -->
+                                <div class="form__content" id="js-form-step04">
+                                        <h2 class="form_ttl"><span class="form_ttl__q f-furura">Q4.</span>生理について</h2>
+
+                                        <div class="customer_info customer_info--pt02">
+
+                                                <dl class="form__row form__row--al_top">
+                                                        <dt class="form__label form__label--al_top">
+                                                                <label for="first-menstruation">初潮は</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" name="初潮開始年齢"
+                                                                        class="first-menstruation input-href required"
+                                                                        id="first-menstruation" placeholder="00歳頃">
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                性交渉の経験
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="radio" name="性交渉の経験" value="あり"
+                                                                        class="required radio-design02" id="sexual01">
+                                                                <label for="sexual01" class="radio-label02">あり</label>
+
+                                                                <input type="radio" name="性交渉の経験" value="なし"
+                                                                        class="radio-design02" id="sexual02">
+                                                                <label for="sexual02" class="radio-label02">なし</label>
+
+
+                                                        </dd>
+                                                </dl>
+
+
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                閉経
+                                                        </dt>
+                                                        <dd class="form__input">
+
+                                                                <input type="radio" name="閉経" value="してない"
+                                                                        class="radio-p02 radio-val02 required select-show radio-design02"
+                                                                        id="menopause02">
+                                                                <label for="menopause02"
+                                                                        class="radio-label02">してない</label>
+
+
+                                                                <input type="radio" name="閉経" value="してる"
+                                                                        class="radio-p02 radio-val01  select-show radio-design02"
+                                                                        id="menopause01">
+                                                                <label for="menopause01"
+                                                                        class="radio-label02">してる</label>
+
+
+
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row menopause-yes-field">
+                                                        <dt class="form__label">
+                                                                <label for="menopause-year">閉経した年齢</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text"
+                                                                        class="hidden-input hidden-input-menopause-yes input-href"
+                                                                        id="menopause-year" name="閉経した年齢"
+                                                                        placeholder="何歳頃">
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row menopause-no-field">
+                                                        <dt class="form__label">
+                                                                月経周期
+                                                        </dt>
+                                                        <dd class="form__input">
+
+
+                                                                <input type="radio" name="月経周期" value="順調"
+                                                                        class="radio-p03 radio-val03 hidden-input-menopause radio-design02"
+                                                                        id="menopause03">
+                                                                <label for="menopause03"
+                                                                        class="radio-label02">順調</label>
+
+                                                                <input type="radio" name="月経周期" value="不順"
+                                                                        class="radio-p03 radio-val04 select-show radio-design02"
+                                                                        id="menopause04">
+                                                                <label for="menopause04"
+                                                                        class="radio-label02">不順</label>
+
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row hidden-field">
+                                                        <dt class="form__label">
+                                                                <label for="menopause-year01">順調な方</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <div class="period">
+
+                                                                        <div class="period__input-wrap error-pos-pd">
+                                                                                <input type="text"
+                                                                                        class="hidden-input hidden-input-menopause"
+                                                                                        id="menopause-year01"
+                                                                                        name="順調な方開始日"
+                                                                                        placeholder="00日">
+                                                                        </div>
+                                                                        <!-- ./period__input-wrap -->
+                                                                        <span class="period__mark">~</span>
+
+                                                                        <div
+                                                                                class="period__input-wrap period__input-wrap--last error-pos-pd">
+                                                                                <input type="text"
+                                                                                        class="hidden-input hidden-input-menopause"
+                                                                                        id="menopause-year02"
+                                                                                        name="順調な方終了日"
+                                                                                        placeholder="00日">
+                                                                        </div>
+
+                                                                        <p class="period__txt">日周期</p>
+                                                                        <!-- ./period__input-wrap -->
+                                                                </div>
+
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row hidden-field">
+                                                        <dt class="form__label">
+                                                                <label for="menopause-year03">不順な方</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <div class="period">
+                                                                        <div class="period__input-wrap error-pos-pd">
+                                                                                <input type="text"
+                                                                                        class="hidden-input hidden-input-menopause"
+                                                                                        id="menopause-year03"
+                                                                                        name="不順な方開始日"
+                                                                                        placeholder="00日">
+                                                                        </div>
+                                                                        <!-- ./period__input-wrap -->
+                                                                        <span class="period__mark">~</span>
+                                                                        <div
+                                                                                class="period__input-wrap period__input-wrap--last error-pos-pd">
+                                                                                <input type="text"
+                                                                                        class="hidden-input hidden-input-menopause"
+                                                                                        id="menopause-year04"
+                                                                                        name="不順な方終了日"
+                                                                                        placeholder="00日">
+                                                                        </div>
+                                                                        <!-- ./period__input-wrap -->
+                                                                        <p class="period__txt">日周期</p>
+                                                                </div>
+
+                                                        </dd>
+                                                </dl>
+
+
+
+                                                <dl class="form__row menopause-no-field">
+                                                        <dt class="form__label">
+                                                                <label for="term">持続期間</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text"
+                                                                        class="input-text input-href hidden-input-menopause"
+                                                                        id="term" name="持続期間" placeholder="00日間">
+                                                        </dd>
+                                                </dl>
+
+
+
+                                                <dl class="form__row menopause-no-field">
+                                                        <dt class="form__label">
+                                                                量は
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="radio" name="量" value="多い"
+                                                                        class="hidden-input-menopause radio-design02"
+                                                                        id="amount01">
+                                                                <label for="amount01" class="radio-label02">多い</label>
+
+                                                                <input type="radio" name="量" value="普通"
+                                                                        class="radio-design02" id="amount02">
+                                                                <label for="amount02" class="radio-label02">普通</label>
+
+                                                                <input type="radio" name="量" value="少ない"
+                                                                        class="radio-design02" id="amount03">
+                                                                <label for="amount03" class="radio-label02">少ない</label>
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row menopause-no-field">
+                                                        <dt class="form__label">
+                                                                生理痛
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="radio" name="生理痛" value="有り"
+                                                                        class="radio-p02 radio-val01 hidden-input-menopause select-show radio-design02"
+                                                                        id="period-cramps01">
+                                                                <label for="period-cramps01"
+                                                                        class="radio-label02">ある</label>
+
+                                                                <input type="radio" name="生理痛" value="無し" class=" radio-p02 radio-val02 select-show
+                                                                        radio-design02" id="period-cramps02">
+                                                                <label for="period-cramps02"
+                                                                        class="radio-label02">ない</label>
+                                                        </dd>
+                                                </dl>
+
+
+                                                <dl class="form__row hidden-field">
+                                                        <dt class="form__label">
+                                                                <label for="menopause-year">生理痛の症状</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+
+                                                                <div class="radio-wrap">
+
+
+
+                                                                        <input type="radio" name="生理痛の症状" value="下腹部痛"
+                                                                                class="hidden-input hidden-input-menopause select-show radio-design02"
+                                                                                id="case01">
+                                                                        <label for="case01"
+                                                                                class="radio-label02">下腹部痛</label>
+
+                                                                        <input type="radio" name="生理痛の症状" value="腰痛"
+                                                                                class="select-show radio-design02"
+                                                                                id="case02">
+                                                                        <label for="case02"
+                                                                                class="radio-label02">腰痛</label>
+                                                                        <input type="radio" name="生理痛の症状" value="その他"
+                                                                                class="select-show radio-design02"
+                                                                                id="case03">
+                                                                        <label for="case03"
+                                                                                class="radio-label02">その他</label>
+
+                                                                </div>
+                                                                <!-- ./radio-wrap -->
+
+                                                                <div class="wrap">
+                                                                        <input type="text" name="服用薬品"
+                                                                                class="hidden-input hidden-input-menopause"
+                                                                                placeholder="服用薬品を記入してください">
+                                                                </div>
+                                                        </dd>
+                                                </dl>
+
+
+
+                                                <dl class="form__row menopause-no-field">
+                                                        <dt class="form__label">
+                                                                最近の月経
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <div class="input-time-row-wrap">
+                                                                        <p
+                                                                                class="input-time-row input-time-row--year error-pos-sp-ad">
+                                                                <select name="最近の月経(年)" id="year02" class="b_year hidden-input-menopause input-time-row__select"></select>
+                                                                <span class="input-time-row__text">年</span>
+                                                         </p>
+                                                                        <p
+                                                                                class="input-time-row input-time-row--md error-pos-sp-ad">
+                                                                <select name="最近の月経(月)" id="month02" class="b_md hidden-input-menopause input-time-row__select">
+                                                                <option value="">--</option>
+                                                        </select>
+                                                        <span class="input-time-row__text">月</span>
+
+                                                                                                                                                                </p>
+                                                                        <p
+                                                                                class="input-time-row input-time-row--md error-pos-sp-ad">
+                                <select name="最近の月経(日)" id="day02" class="b_md hidden-input-menopause input-time-row__select">
+                                        <option value="">--</option>
+                                </select>
+                                <span class="input-time-row__text">日</span>
+                                </div>
+                                <!-- ./input-time-row-wrap -->
+                        </p>
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row menopause-no-field">
+                                                        <dt class="form__label">
+                                                                その前の月経
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <div class="input-time-row-wrap">
+                                                                        <p
+                                                                                class="input-time-row input-time-row--year error-pos-sp-ad">
+                                                <select name="その前の月経(年)" id="year03" class="b_year hidden-input-menopause "></select><span class="input-time-row__text">年</span>
+                                                </p>
+                                                                        <p
+                                                                                class="input-time-row input-time-row--md error-pos-sp-ad">
+                                                <select name="その前の月経(月)" id="month03" class="b_md hidden-input-menopause ">
+                                                        <option value="">--</option>
+                                                </select><span class="input-time-row__text">月</span>
+                                        </p>
+                                                                        <p
+                                                                                class="input-time-row input-time-row--md error-pos-sp-ad">
+                                                                                                                                                                                <select name="その前の月経(日)" id="day03" class="b_md hidden-input-menopause ">
+                                                <option value="">--</option>
+                                        </select><span class="input-time-row__text">日</span>
+                                                                                                                                                                                                                </p>
+                                                                </div>
+                                                                <!-- ./input-time-row-wrap -->
+                                                        </dd>
+                                                </dl>
+
+
+                                                <dl class="form__row menopause-no-field">
+                                                        <dt class="form__label">
+                                                                不正出血
+                                                        </dt>
+                                                        <dd class="form__input">
+
+                                                                <div class="input-time-row-wrap">
+
+
+
+                                                                        <div
+                                                                                class="input-time-start input-time-start--start error-pos-sp-ad">
+                                                                                <select name="不正出血(開始月)" id="month04"
+                                                                                        class="b_md hidden-input-menopause ">
+                                                                                        <option value="">--</option>
+                                                                                </select>月</div>
+                                                                        <div
+                                                                                class="input-time-start input-time-start--middle error-pos-sp-ad">
+                                                                                <select name="不正出血(開始日)" id="day04-01"
+                                                                                        class="b_md hidden-input-menopause ">
+                                                                                        <option value="">--</option>
+                                                                                </select>日
+                                                                        </div>
+
+                                                                        <span class="input-time-start--wave">~</span>
+
+                                                                        <div
+                                                                                class="input-time-start input-time-start--last error-pos-sp-ad">
+                                                                                <select name="不正出血(終了日)" id="day04-02"
+                                                                                        class="b_md hidden-input-menopause ">
+                                                                                        <option value="">--</option>
+                                                                                </select>日間
+                                                                        </div>
+                                                                </div>
+                                                                <!-- ./input-time-row-wrap -->
+                                                        </dd>
+                                                        </dd>
+                                                </dl>
+
+
+                                                <div class="btn_area">
+                                                        <p class="btn_send" id="js-to-step06">次へ</p>
+                                                </div>
+                                        </div>
+                                        <!-- ./customer_info -->
+                                </div>
+                                <!-- ./form__content -->
+
+                                <!-- 質問その5 -->
+                                <div class="form__content" id="js-form-step05">
+                                        <h2 class="form_ttl"><span class="form_ttl__q f-furura">Q5.</span>結婚・家族について</h2>
+
+                                        <div class="customer_info customer_info--pt02">
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                未婚or既婚
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="radio" name="未婚or既婚" value="未婚"
+                                                                        class="radio-p02 radio-val01 required select-show radio-design02"
+                                                                        id="marriage01">
+                                                                <label for="marriage01" class="radio-label02">未婚</label>
+
+                                                                <input type="radio" name="未婚or既婚" value="既婚"
+                                                                        class=" radio-p02 radio-val02 select-show
+                                                                                                                                        radio-design02"
+                                                                        id="marriage02">
+                                                                <label for="marriage02" class="radio-label02">既婚</label>
+                                                        </dd>
+                                                </dl>
+
+
+
+                                                <dl class="form__row hidden-field">
+                                                        <dt class="form__label">
+                                                                性交渉経験
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="radio" name="未婚の方の性交渉経験" value="性交渉経験有り"
+                                                                        class="radio-p02 radio-val01 hidden-input select-show radio-design02"
+                                                                        id="sex-experience03">
+                                                                <label for="sex-experience03"" class="
+                                                                        radio-label02">ある</label>
+
+                                                                <input type="radio" name="未婚の方の性交渉経験" value="性交渉経験無し"
+                                                                        class=" radio-p02 radio-val02 select-show
+                                                                                                                                                                                                        radio-design02"
+                                                                        id="sex-experience04">
+                                                                <label for="sex-experience04"
+                                                                        class="radio-label02">ない</label>
+                                                        </dd>
+                                                </dl>
+
+
+                                                <dl class="form__row hidden-field">
+                                                        <dt class="form__label">
+                                                                既婚の方
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <div class="input-type02">
+                                                                        <span class="input-type02__text">結婚した年齢</span>
+                                                                        <input type="text" name="結婚した年齢"
+                                                                                class="input-type02__input"
+                                                                                placeholder="00歳">
+
+                                                                </div>
+
+                                                                <div class="input-type02">
+                                                                        <span class="input-type02__text">夫の年齢</span>
+                                                                        <input type="text" name="夫の年齢"
+                                                                                class="input-type02__input"
+                                                                                placeholder="00歳">
+                                                                </div>
+                                                        </dd>
+                                                </dl>
+
+
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                子どもの人数
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <select name="child" id="child" class="child">
+                                                                        <option value="0人">0人</option>
+                                                                </select>
+                                                        </dd>
+                                                </dl>
+
+
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                血縁者の疾病
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="radio" name="血縁者の疾病" value="疾病あり"
+                                                                        class="radio-p02 radio-val01 required select-show radio-design02"
+                                                                        id="disease01">
+                                                                <label for="disease01"
+                                                                        class="radio-label02">疾病あり</label>
+
+                                                                <input type="radio" name="血縁者の疾病" value="疾病なし"
+                                                                        class=" radio-p02 radio-val02 select-show
+                                                                                                                                                                                        radio-design02"
+                                                                        id="disease02">
+                                                                <label for="disease02"
+                                                                        class="radio-label02">疾病なし</label>
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row hidden-field">
+                                                        <dt class="form__label">
+                                                                病名と続柄
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <div class="input-type03">
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">糖尿病</span>
+                                                                                <input type="text" name="糖尿病続柄"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="続柄">
+                                                                        </div>
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">高血圧</span>
+                                                                                <input type="text" name="高血圧続柄"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="続柄">
+                                                                        </div>
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">結核</span>
+                                                                                <input type="text" name="結核続柄"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="続柄">
+                                                                        </div>
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">子宮癌</span>
+                                                                                <input type="text" name="子宮癌続柄"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="続柄">
+                                                                        </div>
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">卵巣癌</span>
+                                                                                <input type="text" name="卵巣癌続柄"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="続柄">
+                                                                        </div>
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">乳癌</span>
+                                                                                <input type="text" name="乳癌続柄"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="続柄">
+                                                                        </div>
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">他癌</span>
+                                                                                <input type="text" name="他癌続柄"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="続柄">
+                                                                        </div>
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">遺伝子疾患</span>
+                                                                                <input type="text" name="遺伝子疾患続柄"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="続柄">
+                                                                        </div>
+                                                                </div>
+                                                        </dd>
+                                                </dl>
+
+
+
+
+                                                <div class="btn_area">
+                                                        <p class="btn_send" id="js-to-step07">次へ</p>
+                                                </div>
+                                        </div>
+                                        <!-- ./customer_info -->
+                                </div>
+                                <!-- ./form__content -->
+
+                                <!-- 質問その6 -->
+                                <div class="form__content" id="js-form-step06">
+                                        <h2 class="form_ttl"><span class="form_ttl__q f-furura">Q6.</span>出産について</h2>
+
+                                        <div class="customer_info customer_info--pt02">
+
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                出産の経験
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="radio" name="出産の経験" value="出産の経験経験有り"
+                                                                        class="radio-p02 radio-val01 hidden-input required select-show radio-design02"
+                                                                        id="childbirth-experience01">
+                                                                <label for="childbirth-experience01" class="
+                                                                        radio-label02">ある</label>
+
+                                                                <input type="radio" name="出産の経験" value="出産の経験経験無し"
+                                                                        class=" radio-p02 radio-val02 select-show
+                                                                                                                                                                                                                                        radio-design02"
+                                                                        id="childbirth-experience02">
+                                                                <label for="childbirth-experience02"
+                                                                        class="radio-label02">ない</label>
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row hidden-field">
+                                                        <dt class="form__label">
+                                                                各出産時の<br class="pc">回数
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <div class="input-type03">
+                                                                        <div class="input-type03__col mb0">
+                                                                                <span
+                                                                                        class="input-type03__text">経膣分娩</span>
+                                                                                <input type="text" name="経膣分娩回数"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="0回">
+                                                                        </div>
+                                                                        <div class="input-type03__col">
+                                                                                <span
+                                                                                        class="input-type03__text">帝王切開</span>
+                                                                                <input type="text" name="帝王切開回数"
+                                                                                        class="input-type03__input"
+                                                                                        placeholder="0回">
+                                                                        </div>
+                                                                </div>
+                                                        </dd>
+                                                </dl>
+
+
+
+
+                                                <div class="btn_area">
+                                                        <p class="btn_send" id="js-to-step08">次へ</p>
+                                                </div>
+                                        </div>
+                                        <!-- ./customer_info -->
+                                </div>
+                                <!-- ./form__content -->
+                                <!-- 質問その6 -->
+                                <div class="form__content" id="js-form-step07">
+                                        <h2 class="form_ttl"><span class="form_ttl__q f-furura">Q6.</span>既住歴について</h2>
+
+                                        <div class="customer_info customer_info--pt02">
+
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                既住歴
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="radio" name="既住歴の有無" value="既住歴有り"
+                                                                        class="radio-p02 radio-val01 required select-show radio-design02"
+                                                                        id="resident-history01">
+                                                                <label for="resident-history01"
+                                                                        class="
+                                                                                                                        radio-label02">ある</label>
+
+                                                                <input type="radio" name="既住歴の有無" value="既住歴無し"
+                                                                        class=" radio-p02 radio-val02 select-show
+                                                                                                                                                                                                                                                                                        radio-design02"
+                                                                        id="resident-history02">
+                                                                <label for="resident-history02"
+                                                                        class="radio-label02">ない</label>
+                                                        </dd>
+                                                </dl>
+
+
+                                                <dl class="form__row resident-history-yes">
+                                                        <dt class="form__label">
+                                                                内科
+                                                        </dt>
+                                                        <dd class="form__input">
+
+                                                                <div class="input-type03-check">
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist01">
+                                                                                <label for="internist01"
+                                                                                        class="check input-type03-check__check-btn">結核</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist02" value="腎疾患">
+                                                                                <label for="internist02"
+                                                                                        class="check input-type03-check__check-btn">腎疾患</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist03" value="高血圧">
+                                                                                <label for="internist03"
+                                                                                        class="check input-type03-check__check-btn">高血圧</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist04" value="肝疾患">
+                                                                                <label for="internist04"
+                                                                                        class="check input-type03-check__check-btn">肝疾患</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist05" value="アレルギー">
+                                                                                <label for="internist05"
+                                                                                        class="check input-type03-check__check-btn">アレルギー</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist06" value="ぜんそく">
+                                                                                <label for="internist06"
+                                                                                        class="check input-type03-check__check-btn">ぜんそく</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist07" value="てんかん">
+                                                                                <label for="internist07"
+                                                                                        class="check input-type03-check__check-btn">てんかん</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist08" value="心疾患">
+                                                                                <label for="internist08"
+                                                                                        class="check input-type03-check__check-btn">心疾患</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist09" value="不整脈">
+                                                                                <label for="internist09"
+                                                                                        class="check input-type03-check__check-btn">不整脈</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist10" value="甲状腺疾患">
+                                                                                <label for="internist10"
+                                                                                        class="check input-type03-check__check-btn">甲状腺疾患</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+
+                                                                        <div class="input-type03-check__col">
+                                                                                <input type="checkbox" name="内科病名[]"
+                                                                                        id="internist11" value="その他">
+                                                                                <label for="internist11"
+                                                                                        class="check input-type03-check__check-btn">その他</label>
+                                                                        </div>
+                                                                        <!-- ./input-type03-check__col -->
+                                                        </dd>
+                                                </dl>
+
+
+                                                <dl class="form__row hidden-field">
+                                                        <dt class="form__label">
+                                                                病名
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" class="" name="その他の病名"
+                                                                        placeholder="病名を記入してください">
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row resident-history-yes">
+                                                        <dt class="form__label">
+                                                                婦人科
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" class="" name="婦人科病名"
+                                                                        placeholder="病名を記入してください">
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row resident-history-yes">
+                                                        <dt class="form__label">
+                                                                外科病名
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" class="" name="外科病名"
+                                                                        placeholder="病名を記入してください">
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row resident-history-yes">
+                                                        <dt class="form__label">
+                                                                心療内科
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" class="" name="心療内科病名"
+                                                                        placeholder="病名を記入してください">
+                                                        </dd>
+                                                </dl>
+
+                                                <dl class="form__row resident-history-yes">
+                                                        <dt class="form__label">
+                                                                精神科
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" class="" name="精神科病名"
+                                                                        placeholder="病名を記入してください">
+                                                        </dd>
+                                                </dl>
+
+
+                                                <div class="btn_area">
+                                                        <button class="btn_send" id="js-to-confilm">確認画面へ</button>
+                                                </div>
+                                        </div>
+                                        <!-- ./customer_info -->
+                                </div>
+                                <!-- ./form__content -->
+                        </form>
+                </div>
+                <!-- ./form_END -->
+
+
+
+
+                <footer class="footer">
+                        <p class="footer__copy">
+                                Copyright © 医療法人社団 創輝会 All rights reserved.
+                        </p>
+                </footer>
+        </div>
+        <!-- ./wrapper -->
+
+
+
+        </div>
+        <!-- wrapper end -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+        <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/localization/messages_ja.js"></script>
+        <script src="./js/jquery.steps.min.js"></script>
+
+        <script src="./js/jquery.autoKana.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="./js/scripts.js?0215"></script>
+        <script src="./js/form-visit.js?25478"></script>
+
+
+
+
+</body>
+</html>

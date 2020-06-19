@@ -1,0 +1,313 @@
+.underline_tit {
+    color: #000;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: $pink;
+    position: relative;
+    padding-bottom: 1.125rem;
+    margin-bottom: 2.625rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    @media (max-width: 767px) {
+        margin-bottom: 3.75rem;
+    }
+
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        left: 50%;
+    }
+
+    &::before {
+        width: 114px;
+        background-color: $pink;
+        transform: translateX(-50%);
+
+        @media (max-width: 767px) {
+            width: 60px;
+        }
+    }
+
+    &::after {
+        width: 57px;
+        background-color: #35b798;
+
+        @media (max-width: 767px) {
+            width: 30px;
+        }
+    }
+}
+
+.about_pill {
+    background-color: #faf7f4;
+    padding: 2.6875rem 0 4.5625rem;
+
+    @media (max-width: 767px) {
+        padding: 4.5rem 0;
+    }
+}
+
+.clinic {
+    padding: 3.1875rem 0 4.0625rem;
+
+    @media (max-width: 767px) {
+        padding-bottom: 0;
+    }
+}
+
+.btn-r {
+    border-radius: 24px;
+    border: 2px solid #767676;
+    color: #767676;
+    letter-spacing: .025em;
+    height: 46px;
+    line-height: 42px;
+    width: 177px;
+    text-align: center;
+    display: block;
+    margin-top: 1.6875rem;
+
+    @media (max-width: 767px) {
+        width: 62%;
+        max-width: 280px;
+        margin: 1.75rem auto 3.35rem;
+        border-width: 1px;
+        line-height: 46px;
+    }
+}
+
+.desc_col02 {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 767px) {
+        flex-flow: column-reverse;
+    }
+
+    &--col_center {
+        align-items: flex-start;
+        margin-bottom: 1.3125rem;
+    }
+
+    &--clinic {
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            flex-flow: column;
+        }
+    }
+
+    &__thumb {
+        width: 68%;
+        max-width: 309px;
+
+        @media (max-width: 767px) {
+            margin: 1.4rem auto;
+        }
+
+        &--01 {
+            @media (min-width: 768px) {
+                margin-left: 3.5rem;
+                margin-right: 1.7rem;
+            }
+        }
+
+        &--02 {
+            margin-right: 2.5rem;
+            margin-left: 2.5rem;
+        }
+
+        &--clinic {
+            width: 272px;
+
+            @media (max-width: 767px) {
+                width: 68%;
+                margin: 1.28rem auto 2.8rem;
+            }
+        }
+    }
+
+    &__text {
+        color: #666666;
+        line-height: 1.75;
+        text-align: justify;
+        max-width: 622px;
+        width: 96%;
+
+        @media (max-width: 767px) {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.24rem;
+        }
+
+        &--p02 {
+            max-width: 575px;
+        }
+
+        &--mb {
+            margin-bottom: 1.875rem;
+        }
+
+        &--clinic {
+            width: 100%;
+            max-width: 650px;
+
+            @media (max-width: 767px) {
+                padding: 0 2%;
+            }
+        }
+    }
+}
+
+/* PRICE */
+
+.line_price {
+    padding: 3.5625rem 0 5.625rem;
+
+    @media (max-width: 767px) {
+        padding-bottom: 3.6rem;
+    }
+
+    &__ttl {
+        margin-bottom: 3.125rem;
+
+        @media (max-width: 767px) {
+            margin-bottom: 4.2rem;
+        }
+    }
+}
+
+.bg__linght_blue {
+    background-color: #edfbff;
+}
+
+.line_price__list {
+    text-align: center;
+    color: #7d7d7d;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+        display: block;
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 480px;
+        background-color: #fff;
+        border: 3px solid;
+        border-radius: 9px;
+        font-family: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
+        @media (max-width: 767px) {
+            margin: 0 0 1.5rem;
+            border-radius: 4px;
+            border-width: 1px;
+        }
+
+        &--line__blue {
+            border-color: #94b7cf;
+        }
+
+        &--line__green {
+            border-color: #20c5b7;
+        }
+
+        &:last-of-type {
+            @media (max-width: 767px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__name {
+        text-align: center;
+        color: #fff;
+        font-size: 1.25rem;
+        letter-spacing: 0.025em;
+        padding: 1.0625rem 0;
+        line-height: 1;
+
+        @media (max-width: 767px) {
+            padding: 1.5625rem 0;
+            font-size: 1.7rem;
+        }
+
+        &--bg__blue {
+            background-color: #94b7cf;
+        }
+
+        &--bg__green {
+            background-color: #20c5b7;
+        }
+    }
+
+    &__desc {
+        padding: 1.625rem .9125rem 2.0625rem;
+
+        @media (max-width: 767px) {
+            padding: 1.9rem 1.24rem 2.1rem;
+        }
+
+        &__p {
+            padding: 0 0.425rem;
+            font-size: .9625rem;
+            line-height: 1;
+
+            @media (max-width: 767px) {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+        }
+
+        &__col2 {
+            border-bottom: 1px solid #94b7cf;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.625rem;
+
+            @media (max-width: 767px) {
+                justify-content: center;
+                margin-bottom: .82rem;
+                padding-bottom: .75rem;
+            }
+        }
+
+        &__special {
+            margin-right: 1.025rem;
+            padding-right: 0;
+        }
+
+        &__price {
+            font-size: 1.9375rem;
+            padding: 0;
+
+            @media (max-width: 767px) {
+                font-size: 1.92rem;
+            }
+
+            &__tax {
+                font-size: .7rem;
+            }
+        }
+
+        &__postage {
+            text-align: center;
+            padding: 0;
+
+            //width: 100%;
+            font-size: 1.01rem;
+
+            &__ps {
+                margin: 0 .29rem;
+                display: inline-block;
+            }
+        }
+    }
+}

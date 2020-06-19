@@ -1,0 +1,103 @@
+.flow {
+    padding: 2.6875rem 0 5rem;
+    background: url(../img/flow_bg.png) no-repeat 50% (50% / cover);
+
+    @media (max-width: 767px) {
+        background-image: url(../img/flow_bg_sp.png);
+        background-position: 50% 0%;
+        background-size: auto 66%;
+        padding: 4.5rem 0;
+    }
+}
+
+.flow_step {
+    padding-top: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+        display: block;
+        padding-top: 2.7rem;
+    }
+}
+
+.flow_card {
+    padding: 3.0625rem 1.3125rem 0;
+    background-color: rgba($color: #ff8098, $alpha: 0.9);
+    width: 100%;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+
+    @media (min-width: 768px) {
+        height: 477px;
+        max-width: 316px;
+    }
+
+    @media (max-width: 767px) {
+        border-radius: 5px;
+        margin-bottom: 2.9rem;
+        padding: 3.5rem 1.7rem 2.6rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__ttl {
+        line-height: 1;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.025em;
+        text-align: center;
+    }
+
+    &__num {
+        position: absolute;
+        left: 50%;
+        font-weight: 600;
+        top: -2.125rem;
+        height: 4.1875rem;
+        width: 4.1875rem;
+        line-height: 4.1875rem;
+        text-align: center;
+        background-color: #12a1aa;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        font-size: 1.875rem;
+    }
+}
+
+.card_col {
+    @media (max-width: 767px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 196px;
+
+        @media (min-width: 768px) {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.4375rem;
+        }
+
+        @media (max-width: 767px) {
+            width: 35%;
+            margin-right: 3%;
+        }
+    }
+
+    &__desc {
+        line-height: 1.5;
+        text-align: justify;
+        font-weight: lighter;
+
+        @media (max-width: 767px) {
+            width: 60%;
+        }
+    }
+}

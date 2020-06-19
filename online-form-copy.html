@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="">
+        <meta name="keywords" content="アフターピル,低容量ピル,オンライン,遠隔診療,ライン診療">
+        <link rel="stylesheet" href="./css/slick.css">
+        <link rel="stylesheet" href="css/style.css?4522222222aaaa">
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+        <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="utf-8"></script>
+        <title>オンライン診療予約フォーム</title>
+
+        <meta name="format-detection" content="telephone=no" />
+
+        <script>
+                (function (d) {
+                        var config = {
+                                kitId: 'lcy4fdg',
+                                scriptTimeout: 3000,
+                                async: true
+                        },
+                                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+                })(document);
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167969557-1"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-167969557-1');
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Ads: 824377490 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-824377490"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'AW-824377490');
+        </script>
+
+        <!-- User Heat Tag -->
+        <script type="text/javascript">
+                (function (add, cla) { window['UserHeatTag'] = cla; window[cla] = window[cla] || function () { (window[cla].q = window[cla].q || []).push(arguments) }, window[cla].l = 1 * new Date(); var ul = document.createElement('script'); var tag = document.getElementsByTagName('script')[0]; ul.async = 1; ul.src = add; tag.parentNode.insertBefore(ul, tag); })('//uh.nakanohito.jp/uhj2/uh.js', '_uhtracker'); _uhtracker({ id: 'uhCiNaJU65' });
+        </script>
+        <!-- End User Heat Tag -->
+</head>
+<body>
+        <div class="wrapper">
+                <header class="header header-pages">
+                        <div class="contents flex al-cent">
+
+
+                                <div class="header__logo_sub header-pages__sub">
+                                        <span class="pc">医療法人社団 創輝会グループ</span>
+                                        <img src="./img/pages_header_sub_text_sp.svg" alt="医療法人社団 創輝会グループ" class="sp">
+                                </div>
+
+
+                                <div class="header__logo header-pages__logo"> <a href="./">
+                                                <img src="./img/logo_pages.png" alt="ピル処方窓口" class=""></a>
+                                </div>
+
+                                <div class="header__tel header-pages__tel f-furura pc-dis">
+                                        <a href="./tel/online.html" class="tel_link pages__tel">
+                                                <p class="tel_link__num pages__tel__num">0120-900-794</p>
+                                                <p class="tel_link__time pages__tel__time">10:00-20:00</p>
+                                        </a>
+                                </div>
+                                <!-- ./header__tel -->
+
+                                <button class="trigger trigger--pages sp-dis" id="js-trigger">
+
+                                </button>
+
+                        </div>
+                        <!-- contents end -->
+                </header>
+
+                <div class="pages-fv">
+                        <div class="contents">
+
+                                <div class="pages-fv__catchs">
+                                        <p class="pages-fv__item pages-fv__item--pill01">
+                                                                <img src="./img/fv_item01.png" alt="">
+                                                        </p>
+
+                                        <p class="pages-fv__item pages-fv__item--pill02">
+                                                                                                        <img src="./img/fv_item02.png" alt="">
+                                                                                                </p>
+
+                                        <h1 class="pages-fv__ttl">
+                                                                                                       <img src="./img/fv_catch.png" alt="簡単5分で
+                                                                スピード処方">
+                                                                                               </h1>
+                                </div>
+
+                        </div>
+                </div>
+
+                <ul class="nav nav--pages" id="js-menu">
+                        <li class="nav__item">
+                                <a href="./index.html#link-01" class="nav__link">ピルについて</a>
+                        </li>
+                        <li class="nav__item">
+                                <a href="./index.html#link-02" class="nav__link">オンライン診療の流れ</a>
+                        </li>
+                        <li class="nav__item">
+                                <a href="./index.html#link-03" class="nav__link">よくある質問</a>
+                        </li>
+                        <li class="nav__item">
+                                <a href="./index.html#link-04" class="nav__link">当院について</a>
+                        </li>
+                </ul>
+
+                <div class="form" id="js-form">
+                        <form action="./mail.php" method="POST" id="form">
+
+                                <div class="form__content is-step-show" id="js-form-step01">
+                                        <h2
+                                                class="form_ttl"><span class="form_ttl__q f-furura">Q1.</span>ご希望されるピルを選んでください。</h2>
+
+                                        <div class="radio">
+
+                                                <input type="radio" value="アフターピル" name="ご希望のピル" class="radio_btn"
+                                                        id="pill01">
+                                                <label for="pill01" class="radio_label">アフターピル</label>
+                                                <input type="radio" value="低用量ピル" name="ご希望のピル" class="radio_btn"
+                                                        id="pill02">
+                                                <label for="pill02" class="radio_label">低用量ピル</label>
+                                        </div>
+                                        <!-- ./radio -->
+                                        <!--   <ul class="btn_area">
+                                                <li class="form-btn form-btn--prev js-form-close">戻る</li>
+                                                <li class="form-btn form-btn--next" id="js-to-step02">次へ</li>
+                                        </ul> -->
+
+                                </div>
+                                <!-- ./form__content -->
+
+                                <div class="form__content" id="js-form-step02">
+
+                                        <h2
+                                                class="form_ttl form_ttl--customer"><span class="form_ttl__q f-furura">Q2.</span>アナタのことを教えてください。</h2>
+
+                                        <div class="customer_info">
+
+
+
+
+                                                <dl class="form__row form__row--al_top">
+                                                        <dt class="form__label form__label--al_top">
+                                                                <label for="zip">住所</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <p class="form__p">
+                                                                        <input type="text" class="input-text input-short" id="zip" name="郵便番号" autocomplete="off" onKeyUp="AjaxZip3.zip2addr(this,'','住所','住所');" placeholder="000-0000" >
+                                                                </p>
+                                                                <p class="form__p">
+                                                                        <input type="text" class="input-text" id="address" name="住所" placeholder="郵便番号を入力したら住所が自動入力されます。">
+                                                                </p>
+
+                                                        </dd>
+
+                                                </dl>
+
+
+                                                <div class="form__col">
+                                                        <dl class="form__col_content">
+                                                                <dt class="form__col_label form__col_label--name">
+                                                                        <label for="name">名前</label>
+                                                                </dt>
+                                                                <dd class="form__col_input">
+                                                                        <input type="text" class="input-text" id="name"
+                                                                                name="名前" placeholder="山田花子"></dd>
+                                                        </dl>
+
+                                                        <dl class="form__col_content">
+                                                                <dt class="form__col_label">
+                                                                        <label for="namekana">フリガナ</label>
+                                                                </dt>
+                                                                <dd class="form__col_input">
+                                                                        <input type="text" class="input-text"
+                                                                                id="namekana" name="フリガナ"
+                                                                                placeholder="ヤマダハナコ"></dd>
+                                                        </dl>
+
+                                                </div>
+
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="year">生年月日</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <p class="input__col input__col--year">
+                                                                        <select name="生年月日(年)" id="year" class="b_year">
+                                                                                <option label="1970" value="1970">1970</option>
+                                                                                <option label="1971" value="1971">1971</option>
+                                                                                <option label="1972" value="1972">1972</option>
+                                                                                <option label="1973" value="1973">1973</option>
+                                                                                <option label="1974" value="1974">1974</option>
+                                                                                <option label="1975" value="1975">1975</option>
+                                                                                <option label="1976" value="1976">1976</option>
+                                                                                <option label="1977" value="1977">1977</option>
+                                                                                <option label="1978" value="1978">1978</option>
+                                                                                <option label="1979" value="1979">1979</option>
+                                                                                <option label="1980" value="1980">1980</option>
+                                                                                <option label="1981" value="1981">1981</option>
+                                                                                <option label="1982" value="1982">1982</option>
+                                                                                <option label="1983" value="1983">1983</option>
+                                                                                <option label="1984" value="1984">1984</option>
+                                                                                <option label="1985" value="1985">1985</option>
+                                                                                <option label="1986" value="1986">1986</option>
+                                                                                <option label="1987" value="1987">1987</option>
+                                                                                <option label="1988" value="1988">1988</option>
+                                                                                <option label="1989" value="1989">1989</option>
+                                                                                <option value="" selected>--</option>
+                                                                                <option label="1990" value="1990">1990</option>
+                                                                                <option label="1991" value="1991">1991</option>
+                                                                                <option label="1992" value="1992">1992</option>
+                                                                                <option label="1993" value="1993">1993</option>
+                                                                                <option label="1994" value="1994">1994</option>
+                                                                                <option label="1995" value="1995">1995</option>
+                                                                                <option label="1996" value="1996">1996</option>
+                                                                                <option label="1997" value="1997">1997</option>
+                                                                                <option label="1998" value="1998">1998</option>
+                                                                                <option label="1999" value="1999">1999</option>
+                                                                                <option label="2000" value="2000">2000</option>
+                                                                                <option label="2001" value="2001">2001</option>
+                                                                                <option label="2002" value="2002">2002</option>
+                                                                                <option label="2003" value="2003">2003</option>
+                                                                                <option label="2004" value="2004">2004</option>
+                                                                                <option label="2005" value="2005">2005</option>
+                                                                                <option label="2006" value="2006">2006</option>
+                                                                                <option label="2007" value="2007">2007</option>
+                                                                                <option label="2008" value="2008">2008</option>
+                                                                                <option label="2009" value="2009">2009</option>
+                                                                                <option label="2010" value="2010">2010</option>
+                                                                                <option label="2011" value="2011">2011</option>
+                                                                                <option label="2012" value="2012">2012</option>
+                                                                                <option label="2013" value="2013">2013</option>
+                                                                                <option label="2014" value="2014">2014</option>
+                                                                                <option label="2015" value="2015">2015</option>
+                                                                                <option label="2016" value="2016">2016</option>
+                                                                        </select>年</p>
+                                                                <p class="input__col"><select name="生年月日(月)" id="month" class="b_md">
+<option value="">--</option>
+                                                                                <option label="01" value="01" >01</option>
+                                                                                <option label="02" value="02">02</option>
+                                                                                <option label="03" value="03">03</option>
+                                                                                <option label="04" value="04">04</option>
+                                                                                <option label="05" value="05">05</option>
+                                                                                <option label="06" value="06">06</option>
+                                                                                <option label="07" value="07">07</option>
+                                                                                <option label="08" value="08">08</option>
+                                                                                <option label="09" value="09">09</option>
+                                                                                <option label="10" value="10">10</option>
+                                                                                <option label="11" value="11">11</option>
+                                                                                <option label="12" value="12">12</option>
+                                                                        </select>月</p>
+                                                                <p class="input__col"><select name="生年月日(日)" id="day" class="b_md">
+                                                                                <option value="">--</option>
+                                                                                <option label="01" value="01" >01</option>
+                                                                                <option label="02" value="02">02</option>
+                                                                                <option label="03" value="03">03</option>
+                                                                                <option label="04" value="04">04</option>
+                                                                                <option label="05" value="05">05</option>
+                                                                                <option label="06" value="06">06</option>
+                                                                                <option label="07" value="07">07</option>
+                                                                                <option label="08" value="08">08</option>
+                                                                                <option label="09" value="09">09</option>
+                                                                                <option label="10" value="10">10</option>
+                                                                                <option label="11" value="11">11</option>
+                                                                                <option label="12" value="12">12</option>
+                                                                                <option label="13" value="13">13</option>
+                                                                                <option label="14" value="14">14</option>
+                                                                                <option label="15" value="15">15</option>
+                                                                                <option label="16" value="16">16</option>
+                                                                                <option label="17" value="17">17</option>
+                                                                                <option label="18" value="18">18</option>
+                                                                                <option label="19" value="19">19</option>
+                                                                                <option label="20" value="20">20</option>
+                                                                                <option label="21" value="21">21</option>
+                                                                                <option label="22" value="22">22</option>
+                                                                                <option label="23" value="23">23</option>
+                                                                                <option label="24" value="24">24</option>
+                                                                                <option label="25" value="25">25</option>
+                                                                                <option label="26" value="26">26</option>
+                                                                                <option label="27" value="27">27</option>
+                                                                                <option label="28" value="28">28</option>
+                                                                                <option label="29" value="29">29</option>
+                                                                                <option label="30" value="30">30</option>
+                                                                                <option label="31" value="31">31</option>
+                                                                        </select>日</p>
+                                                        </dd>
+                                                </dl>
+
+
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="tel">電話番号</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="tel" class="input-text input-href" id="tel"
+                                                                        name="電話番号" placeholder="0801111111">
+                                                        </dd>
+
+                                                </dl>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="mail">Eメール</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" class="input-text" id="mail"
+                                                                        name="メールアドレス" placeholder="example@co.jp">
+                                                        </dd>
+
+                                                </dl>
+
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="sex">性別</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <select name="性別" id="sex" class="sex">
+                                                                        <option value="">選択</option>
+                                                                        <option value="女性">女性</option>
+                                                                        <option value="男性">男性</option>
+                                                                </select>
+                                                        </dd>
+
+                                                </dl>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label form__label--online">
+                                                                <label for="date">オンライン<br>診療希望日時</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <span class="date-wrap">
+                                                                        <input type="text" id="date" name="希望日"
+                                                                                class="date" autocomplete="off"
+                                                                                placeholder="2020年01月01日">
+                                                                </span>
+                                                                <p class="time-wrap">
+                                                                                <select name="希望時間(時)" id="time01" class="time01">
+<option value="">--</option>
+                                                                                        <option value="10">10</option>
+                                                                                        <option value="11">11</option>
+                                                                                        <option value="12">12</option>
+                                                                                        <option value="13">13</option>
+                                                                                        <option value="14">14</option>
+                                                                                        <option value="15">15</option>
+                                                                                        <option value="16">16</option>
+                                                                                        <option value="17">17</option>
+                                                                                        <option value="18">18</option>
+                                                                                        <option value="19">19</option>
+                                                                                        <option value="20">20</option>
+                                                                                </select>
+                                                                                時
+                                                                        </p>
+
+                                                                <p class="time-wrap">
+                                                                                 <select name="希望時間(分)" id="time02" class="time02">
+<option value="">--</option>
+                                                                                                <option value="00">00</option>
+                                                                                                <option value="10">10</option>
+                                                                                                <option value="20">20</option>
+                                                                                                <option value="30">30</option>
+                                                                                                <option value="40">40</option>
+                                                                                                <option value="50">50</option>
+                                        </select>
+                                                分
+                                        </p>
+
+                                                        </dd>
+
+                                                </dl>
+
+                                                <dl class="form__row">
+                                                        <dt class="form__label">
+                                                                <label for="line_id">LINE ID</label>
+                                                        </dt>
+                                                        <dd class="form__input">
+                                                                <input type="text" class="input-text input-href"
+                                                                        id="line_id" name="LINE_ID"
+                                                                        placeholder="hanako1111">
+                                                        </dd>
+
+                                                </dl>
+
+
+
+
+
+                                        </div>
+                                        <!-- ./customer_info -->
+
+                                        <div class="note">
+                                                <h3 class="note__ttl">【重要】オンライン診療受診における注意事項</h3>
+
+                                                <div class="note__textbox">
+
+                                                        <ul class="note_list">
+                                                                <li class="note_item">
+                                                                        ・事前に保険証と医療証、または診療情報をお手元にご用意ください。
+                                                                </li>
+                                                                <li class="note_item">
+                                                                        ・必ずご本人がオンライン診療をお受けください。
+                                                                </li>
+                                                                <li class="note_item">
+                                                                        ・初診オンライン診療の場合は、症状によりオンライン診療が適されない場合がございます。その場合は対面診療をご案内いたします。
+                                                                </li>
+                                                                <li class="note_item">
+                                                                        ・オンライン診療後、対面診療が必要となるケースがございますので、物理的にご来院いただける地域の方のみとさせていただきます。
+                                                                </li>
+                                                                <li class="note_item">
+                                                                        ・診療後に、診察代をご請求いたします。クレジットカード決済用のURLをお送りいたします。
+                                                                </li>
+
+
+                                                        </ul>
+
+                                                        <p class="note_link-text">※未成年の方は以下にアクセスし、同意書をご記入の上、写真添付を行ってお送りください。<br>
+                                                                                                                <a href="https://souki-kai.or.jp/pdf/under18.pdf" class="cp" target="_blank">https://souki-kai.or.jp/pdf/under18.pdf</a>
+                                                                                                        </p>
+
+                                                </div>
+
+                                        </div>
+
+
+                                        <div class="btn_area">
+                                                <p class="btn_send" id="js-to-step03">確認ページへ</p>
+                                        </div>
+                                </div>
+                                <!-- ./form__content -->
+
+                                <div class="form__content" id="js-form-step03">
+
+                                        <h2 class="conf_ttl">送信内容の確認</h2>
+
+                                        <table class="conf">
+
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">お薬</th>
+                                                        <td class="conf__td"><span id="js-value-pill"></span></td>
+                                                </tr>
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">住所</th>
+                                                        <td class="conf__td"><span id="js-value-zip"></span><br>
+                                                                <span id="js-value-address"></span>
+                                                        </td>
+                                                </tr>
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">名前</th>
+                                                        <td class="conf__td"><span id="js-value-name"></span>
+                                                                <span class="kana pc-dis">フリガナ</span>
+                                                                <span class="js-value-namekana pc-dis"></span>
+                                                        </td>
+
+                                                </tr>
+                                                <tr class="conf__row pc-vc">
+                                                        <th class="conf__th">フリガナ</th>
+                                                        <td class="conf__td"><span class="js-value-namekana"></span>
+
+                                                        </td>
+
+                                                </tr>
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">生年月日</th>
+                                                        <td class="conf__td">
+                                                                <span id="js-value-year"></span>年
+                                                                <span id="js-value-month"></span>月
+                                                                <span id="js-value-day"></span>日
+                                                        </td>
+                                                </tr>
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">電話番号</th>
+                                                        <td class="conf__td">
+                                                                <span id="js-value-tel"></span>
+                                                        </td>
+                                                </tr>
+
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">Eメール</th>
+                                                        <td class="conf__td">
+                                                                <span id="js-value-mail"></span>
+                                                        </td>
+                                                </tr>
+
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">性別</th>
+                                                        <td class="conf__td">
+                                                                <span id="js-value-sex"></span>
+                                                        </td>
+                                                </tr>
+
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">オンライン<br>診療希望日時</th>
+                                                        <td class="conf__td">
+                                                                <span id="js-value-date"></span><span
+                                                                        id="js-value-time01"></span>:<span
+                                                                        id="js-value-time02"></span>~
+                                                        </td>
+                                                </tr>
+
+                                                <tr class="conf__row">
+                                                        <th class="conf__th">LINE ID</th>
+                                                        <td class="conf__td">
+                                                                <span id="js-value-lineID"></span>
+                                                        </td>
+                                                </tr>
+
+                                        </table>
+
+                                        <div class="btn_area">
+                                                <button class="btn_send">上記内容で予約</button>
+                                        </div>
+                                </div>
+                                <!-- ./form__content -->
+                        </form>
+
+                </div>
+                <!-- ./form_END -->
+
+
+
+
+                <footer class="footer">
+                        <p class="footer__copy">
+                                Copyright © 医療法人社団 創輝会 All rights reserved.
+                        </p>
+                </footer>
+        </div>
+        <!-- ./wrapper -->
+
+
+
+        </div>
+        <!-- wrapper end -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script src="./js/jquery.autoKana.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="./js/scripts.js?0215"></script>
+        <script src="./js/form.js?4552222"></script>
+
+
+
+
+</body>
+</html>

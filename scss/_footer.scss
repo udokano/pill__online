@@ -1,0 +1,87 @@
+.footer {
+    background-color: #eaeaea;
+    padding: .5rem 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 8888;
+    width: 100%;
+
+    @media (max-width: 767px) {
+        padding: .98rem 0;
+    }
+
+    &__copy {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: #848484;
+    }
+}
+
+@media (max-width: 767px) {
+    /* fixed navigation
+    ------------------------------ */
+    .fixed-nav.sp-dis {
+        position: fixed;
+        z-index: 9998;
+        bottom: 0;
+        display: -ms-flexbox !important;
+        display: -webkit-box !important;
+        display: flex !important;
+        width: 100%;
+        height: 50px;
+        background: #000;
+        -ms-flex-align: stretch;
+        -webkit-box-align: stretch;
+        align-items: stretch;
+    }
+
+    .fixed-nav li {
+        position: relative;
+        text-align: center;
+        -ms-flex: 1 0 33.3333%;
+        -webkit-box-flex: 1;
+        flex: 1 0 33.3333%;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+
+    .fixed-nav li:nth-of-type(2)::before,
+    .fixed-nav li:nth-of-type(2)::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        margin: auto;
+        padding: 7px 0;
+        content: "|";
+        color: #fff;
+    }
+
+    .fixed-nav li:nth-of-type(2)::before {
+        left: 0;
+    }
+
+    .fixed-nav li:nth-of-type(2)::after {
+        right: 0;
+    }
+
+    .fixed-nav a {
+        display: block;
+        margin: 0 10px;
+        padding: 3px 0;
+        -webkit-transition: background .5s;
+        transition: background .5s;
+        color: #fff;
+        border-radius: 1em;
+        font-size: 1.3478rem;
+    }
+
+    .fixed-nav a.is-hover,
+    .fixed-nav a.is-active,
+    .fixed-nav a.is-first {
+        background: #6aafd4;
+    }
+}

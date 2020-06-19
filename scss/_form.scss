@@ -1,0 +1,1245 @@
+/*
+
+フォームスタイル
+
+----------------------------------------*/
+
+$pink: #ff8098;
+
+.form {
+    /*  position: fixed;
+     left: 0;
+     top: 0;
+     z-index: 999999; */
+    border-top: 1px solid #cccccc;
+    width: 100%;
+
+    /*  height: 0;
+     visibility: hidden;
+     opacity: 0; */
+    overflow: hidden;
+    overflow-y: auto; /* scrollにはしないことでスクロールの必要がないときはスクロールバーを表示させない */
+    -webkit-overflow-scrolling: touch;
+
+    @media (max-width: 767px) {
+        border-top: none;
+    }
+
+    &__content {
+        max-width: 900px;
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        visibility: hidden;
+        height: 0;
+        background-color: #fff;
+    }
+}
+
+.steps > ul {
+    display: none !important;
+}
+
+.form_ttl {
+    font-size: 1.875rem;
+    line-height: 1;
+    margin-bottom: 5.625rem;
+    font-weight: 400;
+
+    @media (max-width: 767px) {
+        font-size: 1.4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__q {
+        color: $pink;
+        display: block;
+        margin-bottom: 1.8rem;
+        font-size: 3.125rem;
+        letter-spacing: -.01em;
+    }
+
+    &--customer {
+        margin-bottom: 2.875rem;
+    }
+}
+
+/* 表示した時のスタイル */
+
+.is-form-show {
+    visibility: inherit;
+    opacity: 1;
+    height: 100vh;
+}
+
+.is-step-show {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    padding: 2.5rem 0 0;
+    margin: 3.8rem auto;
+}
+
+.is-hidden {
+    overflow: hidden;
+}
+
+.sp-flex {
+    @media (max-width: 767px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* ラジオボックスとチェックボックス非表示 */
+
+input[type='radio'],
+input[type='checkbox'] {
+    position: absolute;
+    visibility: hidden;
+    width: 0 !important;
+    height: 0;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.radio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5.78rem;
+
+    @media (max-width: 767px) {
+        display: block;
+    }
+
+    &--area {
+        margin-bottom: 5.78rem;
+    }
+}
+
+.radio_label {
+    border: 2px solid $pink;
+    border-radius: 10px;
+    width: 72%;
+    max-width: 307px;
+    height: 38vw;
+    max-height: 87px;
+    text-align: center;
+    color: $pink;
+    padding: 1.7125rem 2.8rem 1.4rem 1.8rem;
+    font-size: 1.875rem;
+    line-height: 1;
+    position: relative;
+    margin: 0 1.75rem;
+    display: block;
+
+    @media (max-width: 767px) {
+        margin: 0 auto 1.25rem;
+        max-width: none;
+        padding: 1.9125rem 2.8rem 1.9125rem 1.8rem;
+        height: auto;
+        border-radius: 5px;
+        font-size: 1.4rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        background-color: $pink;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+
+        @media (max-width: 767px) {
+            width: 1.9rem;
+            height: 1.9rem;
+            right: 1.25rem;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 29px;
+        height: 15px;
+        top: 47%;
+        transform: translateY(-50%) rotate(45deg);
+        width: 8px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+
+        @media (max-width: 767px) {
+            right: 1.8125rem;
+            height: 0.9375rem;
+            width: 0.5rem;
+        }
+    }
+
+    /* エリア選択版 */
+
+    &--area {
+        margin: 0 1rem 1rem;
+
+        @media (max-width: 767px) {
+            margin: 0 auto 1.2rem;
+        }
+    }
+}
+
+.radio_btn:checked + .radio_label {
+    background-color: $pink;
+    color: #fff;
+}
+
+.radio_btn:checked + .radio_label::before {
+    background-color: #fff;
+}
+
+.radio_btn:checked + .radio_label::after {
+    border-color: $pink;
+}
+
+.form__note {
+    background-color: #fbfbfb;
+    padding: .95rem;
+    max-height: 240px;
+    height: 30vw;
+    overflow-y: scroll;
+    margin-bottom: 2.8rem;
+    text-align: justify;
+}
+
+/* ラジオボタンパターン02 */
+
+.radio-label02 {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+}
+
+.radio-label02::before {
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+
+.radio-label02::after {
+    background: #ed7a9c;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 10px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: ease-in .2s;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+}
+
+.radio-design02:checked + .radio-label02::after {
+    opacity: 1;
+}
+
+/* チェックボックス */
+
+.check_wrap {
+    text-align: center;
+    margin-bottom: 2.8rem;
+}
+
+.check {
+    padding-left: 2.2rem;
+    position: relative;
+    text-align: center;
+    font-size: 1.24rem;
+
+    @media (max-width: 767px) {
+        padding-left: 3.9rem;
+    }
+
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        display: block;
+    }
+
+    &::after {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid #ccc;
+        height: 21px;
+        width: 21px;
+    }
+
+    &::before {
+        left: 6px;
+        height: 15px;
+        top: 40%;
+        transform: translateY(-50%) rotate(45deg);
+        width: 10px;
+        border-right: 4px solid $pink;
+        border-bottom: 4px solid $pink;
+        opacity: 0;
+    }
+}
+
+input[type=checkbox]:checked + .check::before {
+    opacity: 1;
+}
+
+/* お客様情報 */
+
+.customer_info {
+    width: 100%;
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input, select {
+    font-size: 1.25rem;
+    background-color: #fffdf3;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    border: 3px solid #cccccc;
+    height: 54px;
+    line-height: normal; //safariでプレースホルダーがずれるのを阻止
+}
+
+input:focus, select:focus {
+    border-color: $pink;
+}
+
+input {
+    padding: .47rem .8rem;
+    width: 100%;
+
+    @media (max-width: 767px) {
+        padding: .78rem .9rem;
+    }
+}
+
+::placeholder {
+    color: #e6e6e6;
+}
+
+select {
+    //height: 45px;
+    line-height: 1.24;
+    width: 40%;
+    max-width: 160px;
+    margin-right: .4rem;
+    padding: .8rem .2rem;
+    text-align: center;
+    background: #fffdf3 url(../img/select_arw.png) no-repeat 92% 50% / 0.75rem auto;
+
+    @media (max-width: 767px) {
+        padding: .8rem 1.2rem;
+    }
+}
+
+@-moz-document url-prefix() {
+    select {
+        text-align: left;
+    }
+}
+
+/* テキストの幅約半分 */
+
+.input-href {
+    max-width: 203px;
+    width: 62%;
+}
+
+/* テキストの幅短い */
+
+.input-short {
+    max-width: 153px;
+    width: 48%;
+}
+
+.input-short02 {
+    max-width: 120px;
+    width: 38%;
+
+    @media (max-width: 767px) {
+        max-width: 18%;
+        text-align: center;
+    }
+}
+
+.input-short03 {
+    width: 40%;
+    padding-left: 1.2rem;
+
+    &__text {
+        @media (max-width: 767px) {
+            width: 41%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        width: 42%;
+    }
+}
+
+.first-menstruation {
+    padding-left: .88rem;
+
+    @media (max-width: 767px) {
+        width: 23%;
+        max-width: none;
+    }
+}
+
+.customer_info--pt02 {
+    .form__label {
+        width: 20%;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    .form__input {
+        width: 80%;
+        padding-left: 1.8rem;
+
+        @media (max-width: 767px) {
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+
+    .form__col {
+        @media (min-width: 768px) {
+            //padding-left: 35px;
+        }
+    }
+}
+
+.form__row {
+    padding: 1.7rem 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+
+    @media (max-width: 767px) {
+        flex-flow: column;
+        padding: 2.58rem 0;
+    }
+
+    /*  &:last-of-type {
+         margin-bottom: 2.78rem;
+     } */
+
+    &--al_top {
+        align-items: flex-start;
+    }
+}
+
+.form__label {
+    padding: 1.2rem 0;
+    margin-right: .99rem;
+    font-size: 1.25rem;
+    width: 100px;
+    text-align: right;
+
+    @media (max-width: 767px) {
+        text-align: left;
+        font-size: 1.4rem;
+        padding-top: 0;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    &--al_top {
+        padding-top: 0.3rem;
+
+        @media (max-width: 767px) {
+            padding-top: 1.2rem;
+        }
+    }
+
+    &--online {
+        @media (min-width: 768px) {
+            font-size: .92rem;
+        }
+
+        label {
+            line-height: 1.35;
+
+            @media (min-width: 768px) {
+                white-space: nowrap;
+                position: relative;
+                left: -7px;
+            }
+        }
+    }
+}
+
+.form__input {
+    width: 561px;
+    font-size: 1.2rem;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.form__col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.7rem 0;
+    padding-left: 2.2rem;
+    border-bottom: 1px solid #ccc;
+
+    @media (max-width: 767px) {
+        display: block;
+        padding: 2.58rem 0;
+
+        &:first-of-type {
+            .form__col_content {
+                margin-bottom: 1.7rem;
+            }
+        }
+    }
+}
+
+.form__col_content {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        display: block;
+    }
+}
+
+.form__col_label {
+    font-size: 1.25rem;
+    width: 30%;
+
+    &--fst {
+        @media (min-width: 768px) {
+            padding-left: 24px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        width: 80px;
+        margin-right: 0.99rem;
+        font-size: 1.4rem;
+        padding: 0 0 1.2rem;
+    }
+
+    &--name {
+        @media (min-width: 768px) {
+            width: 25%;
+        }
+    }
+}
+
+.form__col_input {
+    width: 70%;
+    position: relative;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+/* 身長体重 */
+
+.form__col--hw {
+    @media (max-width: 767px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.form__col_label--hw {
+    @media (max-width: 767px) {
+        padding-bottom: 0;
+        width: 18%;
+    }
+}
+
+.form__col_content--hw {
+    @media (max-width: 767px) {
+        display: flex;
+        width: 50%;
+    }
+}
+
+.form__col_h-w {
+    width: 40%;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 767px) {
+        width: 55%;
+    }
+}
+
+.unit {
+    margin-left: .4rem;
+}
+
+.hidden-field {
+    display: none;
+}
+
+.menopause-no-field, .menopause-yes-field, .resident-history-yes {
+    display: none;
+
+    //visibility: hidden;
+    //height: 0;
+    //padding: 0;
+}
+
+.is-field-show {
+    visibility: visible;
+    height: auto;
+    padding: 1.7rem 0;
+
+    @media (max-width: 767px) {
+        padding: 2.58rem 0;
+    }
+}
+
+.form__p {
+    margin-bottom: 1.2rem;
+    position: relative;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+//クリニック選択　
+
+.clinic-select {
+    max-width: 100%;
+    width: 73.5%;
+    background-position-x: 98%;
+    padding-left: .78rem;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.input__col {
+    display: inline-block;
+    width: 20%;
+
+    @media (max-width: 767px) {
+        width: 31%;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &--year {
+        width: 24%;
+
+        @media (max-width: 767px) {
+            width: 31%;
+        }
+    }
+
+    &--year-p02, &--month, &--day {
+        @media (max-width: 767px) {
+            padding-bottom: 1.98rem;
+        }
+    }
+
+   /*  &--month {
+        @media (max-width: 767px) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &--day {
+        @media (max-width: 767px) {
+            margin-bottom: 1.5rem;
+        }
+    } */
+
+    &--age {
+        width: 22%;
+
+        @media (max-width: 767px) {
+            width: 39%;
+            margin: 0;
+            padding-bottom: 1.98rem;
+        }
+    }
+
+    &--long {
+        width: 24%;
+    }
+}
+
+//性別
+
+.sex {
+    padding-left: 1.4rem;
+    padding-right: 1.0rem;
+    width: 6.25rem;
+
+    @media (max-width: 767px) {
+        width: 7.48rem;
+        padding-left: 1.6rem;
+        padding-right: .8rem;
+    }
+}
+
+//生年月日
+
+.b_year {
+    width: 96px;
+    margin-right: 0.4rem;
+    padding-left: .67rem;
+    padding-right: .88rem;
+
+    @media (max-width: 767px) {
+        width: 80%;
+    }
+}
+
+.b_md {
+    width: 70px;
+    padding: .8rem .78rem;
+
+    @media (max-width: 767px) {
+        width: 80%;
+    }
+}
+
+.date-wrap {
+    @media (max-width: 767px) {
+        margin-bottom: 1.5rem;
+        display: block;
+        width: 100%;
+    }
+}
+
+.date {
+    display: inline-block;
+    width: 307px;
+    padding-left: 3.18rem;
+    margin-right: 19px;
+    background: #fffdf3 url(../img/icon_cal.png) no-repeat 3.2% 50% / 2.0625rem auto;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        padding-left: 3.89rem;
+    }
+}
+
+.age {
+    width: 64%;
+    margin-right: .4rem;
+}
+
+.time-wrap {
+    display: inline-block;
+    width: 19%;
+    position: relative;
+
+    @media (max-width: 767px) {
+        width: 28%;
+    }
+
+    select {
+        width: 70px;
+        margin-right: 3px;
+        padding: .8rem .45rem;
+        padding-left: .78rem;
+
+        @media (max-width: 767px) {
+            width: 70%;
+            padding-left: 1.52rem;
+        }
+    }
+}
+
+/* 周期 */
+
+.period {
+    display: flex;
+    align-items: center;
+
+    &__input-wrap {
+        display: inline-block;
+        width: 22%;
+
+        @media (max-width: 767px) {
+            width: 20%;
+        }
+    }
+
+    select {
+        width: 100%;
+        padding-left: .84rem;
+    }
+
+    &__input-wrap--last {
+        margin-right: .4rem;
+    }
+
+    &__mark {
+        margin: 0 .98rem;
+        display: inline-block;
+    }
+}
+
+.spece-bettween {
+    justify-content: space-between;
+}
+
+.input-type02 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    position: relative;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &--sp-row {
+        width: 52%;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            width: 47%;
+            margin-bottom: 0;
+            justify-content: space-between;
+        }
+
+        select {
+            margin-right: 0;
+        }
+    }
+
+    &__input {
+        width: 18%;
+    }
+
+    &__text {
+        width: 21%;
+        font-size: .88rem;
+    }
+}
+
+.input-type03 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 767px) {
+        padding: 0 1.1rem;
+    }
+
+    &__col {
+        width: 50%;
+        margin-bottom: 1.2rem;
+
+        &:last-of-type, &:nth-of-type(7) {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            //width: 46%;
+        }
+    }
+
+    &__text {
+        width: 45%;
+        display: inline-block;
+        font-size: .92rem;
+
+        @media (max-width: 767px) {
+            width: 37%;
+        }
+
+        &--wide {
+            @media (max-width: 767px) {
+                width: 43%;
+            }
+        }
+    }
+
+    &__text-sub {
+        width: 8%;
+        font-size: .88rem;
+    }
+
+    &__input {
+        width: 26.5%;
+        text-align: center;
+
+        @media (max-width: 767px) {
+            width: 35%;
+        }
+
+        &--wide {
+            width: 30%;
+
+            @media (max-width: 767px) {
+                width: 44%;
+            }
+        }
+    }
+}
+
+.sick-hidden-name {
+    display: none;
+    margin-top: 1.2rem;
+    width: 100%;
+}
+
+.input__type-birth {
+    width: 120px;
+    display: inline-block;
+
+    @media (max-width: 767px) {
+        //width: 80% !important;
+        //display: block;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.3rem;
+        width: 55% !important;
+    }
+
+    &--long {
+        width: 140px;
+
+        @media (max-width: 767px) {
+            width: 30%;
+        }
+    }
+
+    &--middle {
+        width: 130px;
+
+        @media (max-width: 767px) {
+            width: 30%;
+        }
+    }
+}
+
+.child {
+    width: 78px;
+    padding-left: .88rem;
+}
+
+.radio-wrap {
+    position: relative;
+    padding-bottom: 1.85rem;
+}
+
+.input-type03-check {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__col {
+        width: 50%;
+        margin-bottom: 1.55rem;
+    }
+
+    &__check-btn {}
+}
+
+.check__row {
+    padding-left: 2.1rem;
+    width: 50%;
+    margin-bottom: 1.55rem;
+    text-align: left;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+        padding-left: 3.1rem;
+    }
+}
+
+.input-time-row-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.input-time-row {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin-right: 1.4rem;
+    position: relative;
+
+    @media (max-width: 767px) {
+        width: 33%;
+    }
+
+    &--md {
+        width: 21%;
+
+        @media (max-width: 767px) {
+            width: 22.8%;
+        }
+    }
+
+    &__select {
+        width: 80%;
+    }
+
+    &__text {
+        width: 12%;
+    }
+}
+
+.input-time-start {
+    display: flex;
+    align-items: center;
+    width: 21%;
+    margin-right: .88rem;
+    position: relative;
+
+    @media (max-width: 767px) {
+        width: 27%;
+    }
+
+    &--wave {
+        margin-left: .5rem;
+        margin-right: .88rem;
+        font-size: 1.88rem;
+        line-height: 1;
+    }
+
+    &--start {
+        margin-right: 2.555rem;
+
+        @media (max-width: 767px) {
+            margin-right: 1.2rem;
+        }
+    }
+
+    &--middle {
+        margin-right: 0;
+    }
+
+    &--last {
+        width: 28%;
+        margin-right: 0;
+
+        @media (max-width: 767px) {
+            width: 31%;
+            white-space: nowrap;
+        }
+    }
+
+    select {
+        width: 88px;
+
+        @media (max-width: 767px) {
+            width: 80%;
+        }
+    }
+}
+
+.output {
+    margin-bottom: 2.5rem;
+
+    &__value {
+        font-size: 1.22rem;
+        margin-bottom: 1.1rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* ボタンスタイル */
+
+.form-btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    width: 220px;
+    height: 51px;
+    line-height: 51px;
+    margin: 0 .8rem;
+    color: #fff;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+        margin-bottom: 1.1rem;
+        font-size: 1.82rem;
+        border-radius: 2px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &--prev {
+        background-color: #efefef;
+        color: #454545;
+    }
+
+    &--next {
+        background-color: #333;
+    }
+
+    button {
+        color: #fff;
+        line-height: 1;
+        display: inline-block;
+    }
+}
+
+.btn_send {
+    display: block;
+    max-width: 307px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $pink;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    height: 87px;
+    line-height: 87px;
+    font-size: 1.875rem;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+        border-radius: 5px;
+        font-size: 2.3rem;
+    }
+}
+
+.btn_area {
+    text-align: center;
+    margin: 2.78rem auto;
+
+    &--row02 {
+        .btn_send {
+            margin: 0 .9rem;
+            display: inline-block;
+            max-width: 268px;
+            vertical-align: top;
+
+            &--prev {
+                background-color: #fff;
+                border: 1px solid $pink;
+                color: $pink;
+                border-width: 2px;
+
+                @media (max-width: 767px) {
+                    margin-bottom: 0rem;
+                }
+            }
+
+            @media (max-width: 767px) {
+                margin-bottom: 1.25rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-flow: column-reverse;
+            align-items: center;
+        }
+    }
+}
+
+.note {
+    padding: 2.875rem 0 3.625rem;
+
+    &__ttl {
+        font-size: 1.3125rem;
+        color: #12a1aa;
+        line-height: 1;
+        margin-bottom: 1.375rem;
+        text-align: center;
+        font-weight: 400;
+
+        @media (max-width: 767px) {
+            line-height: 1.32;
+        }
+    }
+
+    &__textbox {
+        border: 5px solid #12a1aa;
+        padding: 1.4375rem 2.1875rem 2rem;
+
+        @media (max-width: 767px) {
+            padding: 2.4rem 2.2rem;
+        }
+    }
+}
+
+.note_list {
+    margin-bottom: 1.625rem;
+
+    &__item {
+        color: #353535;
+        font-size: 0.875rem;
+        line-height: 1.71rem;
+    }
+}
+
+.thanks_messege {
+    text-align: center;
+    padding: 4.5rem 0 2.2rem;
+    font-size: 1.6rem;
+    letter-spacing: .075em;
+}
+
+/* date picker */
+
+#ui-datepicker-div {
+    z-index: 9000 !important;
+}

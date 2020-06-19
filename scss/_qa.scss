@@ -1,0 +1,124 @@
+/* FAQ */
+
+.line_faq {
+    padding: 3.525rem 0;
+    background-color: #ffeef1;
+
+    @media (max-width: 767px) {
+        padding: 4.2rem 0;
+    }
+
+    &__ttl {
+        margin-bottom: 3.9375rem;
+    }
+}
+
+.line_faq__list {
+    &__item {
+        margin-bottom: 0.375rem;
+    }
+
+    &__qa {
+        display: flex;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            align-items: center;
+        }
+    }
+
+    &__answer {
+        align-items: flex-start;
+    }
+
+    &__question {}
+
+    &__answer {
+        height: 0;
+        overflow: hidden;
+        transition: .25s ease-in;
+
+        &--open {
+            height: auto;
+            overflow: auto;
+        }
+    }
+
+    /* 頭文字 */
+
+    &__initials {
+        font-size: 1.875rem;
+        color: #fff;
+        line-height: 43px;
+        padding: 0.875rem 0;
+        width: 62px;
+        height: 69px;
+        text-align: center;
+        font-weight: 200;
+        font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','メイリオ', Meiryo,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+
+        @media (max-width: 767px) {
+            width: 13%;
+            height: 5.0rem;
+        }
+    }
+
+    &__question__initials {
+        background-color: #76767b;
+
+        @media (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__answer__initials {
+        background-color: $pink;
+    }
+
+    /* 本文 */
+
+    &__text {
+        padding: 1.375rem 1.4375rem;
+        letter-spacing: .025em;
+        font-size: 1.25rem;
+        background-color: #fff;
+        color: #666666;
+        font-weight: lighter;
+
+        @media (min-width: 768px) {
+            width: 930px;
+        }
+
+        @media (max-width: 767px) {
+            width: 86%;
+        }
+    }
+
+    &__question__text {
+        background: #fff url(../img/accodion_down.png) no-repeat 98% 50% / 29px 13px;
+        height: 69px;
+        cursor: pointer;
+
+        @media (min-width: 768px) {
+            line-height: 1;
+        }
+
+        @media (max-width: 767px) {
+            padding-right: 3.4rem;
+            height: auto;
+            background-size: 20px auto;
+        }
+
+        &--arrow__up {
+            background-image: url(../img/accodion_up.png);
+        }
+    }
+
+    &__answer__text {
+        font-size: 1.0625rem;
+        line-height: 1.59;
+        border-top: 1px solid #ffeef1;
+    }
+}

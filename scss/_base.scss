@@ -1,0 +1,683 @@
+/* reset & set
+-------------------------------------------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    border: 0;
+    outline: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a img:hover,
+a:hover {
+    opacity: 0.8;
+}
+
+li img {
+    display: block;
+}
+
+a img {
+    border-style: none;
+}
+
+@font-face {
+    font-family: 'Futura Bk BT';
+    src: url("./font/Futura.ttc") format("woff");
+}
+
+.f-furura {
+    font-family: 'Futura';
+}
+
+/*************************
+
+
+よく使う
+スタイル記述
+
+
+*************************/
+
+.sp {
+    display: none;
+}
+
+.sp-dis {
+    display: none !important;
+}
+
+.tl {
+    text-align: left !important;
+}
+
+.tc {
+    text-align: center;
+}
+
+.po_ad {
+    position: absolute;
+}
+
+.po_rel {
+    position: relative;
+}
+
+.trx {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.try {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.trxy {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ls1 {
+    letter-spacing: 1px;
+}
+
+.ls2 {
+    letter-spacing: 2px;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.box-size {
+    box-sizing: border-box;
+}
+
+.vt {
+    vertical-align: top !important;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.al-cent {
+    align-items: center !important;
+}
+
+.al-top {
+    align-items: flex-start !important;
+}
+
+.al-bottom {
+    align-items: flex-end !important;
+}
+
+.ju-st {
+    justify-content: flex-start !important;
+}
+
+.gosic {
+    font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,YuGothic,'Yu Gothic',sans-serif;
+}
+
+.min {
+    font-family: "MS PMincho", "ヒラギノ明朝 Pro W3", "ＭＳ Ｐ明朝", "Hiragino Mincho Pro", "serif";
+}
+
+.cw {
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+img.cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.sm {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+
+.bb-none {
+    border-bottom: none !important;
+}
+
+@media (max-width: 767px) {
+    .sp-dis {
+        display: block !important;
+    }
+}
+
+.tl {
+    text-align: left !important;
+}
+
+.tc {
+    text-align: center;
+}
+
+.trx {
+    transform: translateX(-50%);
+}
+
+.try {
+    transform: translateY(-50%);
+}
+
+.ls1 {
+    letter-spacing: 1px;
+}
+
+.ls2 {
+    letter-spacing: 2px;
+}
+
+.jc-cent {
+    justify-content: center !important;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fw {
+    flex-wrap: wrap;
+}
+
+.box-size {
+    box-sizing: border-box;
+}
+
+.vt {
+    vertical-align: top !important;
+}
+
+.al-cent {
+    align-items: center !important;
+}
+
+.al-top {
+    align-items: flex-start !important;
+}
+
+.al-bottom {
+    align-items: flex-end !important;
+}
+
+.ju-st {
+    justify-content: flex-start !important;
+}
+
+.fl-right {
+    float: right;
+}
+
+.ju-right {
+    justify-content: flex-end;
+}
+
+.mb0 {
+    margin-bottom: 0 !important;
+}
+
+.mb15 {
+    margin-bottom: 15px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.pc-mb0 {
+    @media (min-width: 768px) {
+        margin-bottom: 0 !important;
+    }
+}
+
+/****************************
+
+カラー
+
+*********************************/
+$pink: #ff8098;
+
+//bg
+
+.bg__area {
+    background: no-repeat 50% 50% / cover;
+}
+
+//font color
+
+.cw {
+    color: #fff;
+}
+
+.cp {
+    color: #ff8098;
+}
+
+.blue {
+    color: #146db8;
+}
+
+.cg2 {
+    color: #009944;
+}
+
+//フォームリセット
+
+input,
+label,
+select,
+button,
+submit,
+textarea {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font: inherit;
+}
+
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+    border-radius: 0;
+    -webkit-box-sizing: content-box;
+    -webkit-appearance: button;
+    appearance: button;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+
+    &::-webkit-search-decoration {
+        display: none;
+    }
+
+    &::focus {
+        outline-offset: -2px;
+    }
+}
+
+select {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+    outline: 0;
+}
+
+html {
+    font-size: 100%; /*16px*/
+}
+
+body {
+    line-height: 1.7;
+    color: #454545;
+    font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,YuGothic,'Yu Gothic',sans-serif;
+}
+
+/* Make webkit render the search input like a normal text field */
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+    display: none;
+}
+
+/* Turn off scroll bars in IE unless needed */
+textarea {
+    overflow: auto;
+}
+
+/*クリアフィックス*/
+.cf:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.sp {
+    display: none;
+}
+
+.pc-vc {
+    visibility: collapse;
+
+    @media (max-width: 767px) {
+        visibility: visible;
+    }
+}
+
+h2,
+h3,
+h4 {
+    font-weight: 300;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+}
+
+.text__image {
+    width: 72%;
+    margin: auto;
+}
+
+.gd-tit {
+    background: rgb(165, 175, 185);
+    background: linear-gradient(270deg, rgba(165, 175, 185, 1) 0%, rgba(14, 161, 218, 1) 63%, rgba(2, 68, 110, 1) 100%);
+    padding: 1.5rem 0;
+    font-size: 2.1rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+
+    @media (max-width: 767px) {
+        font-size: 1.5rem;
+    }
+
+    span {
+        img {
+            width: 30px;
+            display: block;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media (max-width: 767px) {
+                width: 16px;
+            }
+        }
+
+        img.left__arw {
+            left: -47px;
+
+            @media (max-width: 767px) {
+                left: -25px;
+            }
+        }
+
+        img.right__arw {
+            right: -47px;
+
+            @media (max-width: 767px) {
+                right: -25px;
+            }
+        }
+    }
+}
+
+.gd-tit.gd__none {
+    background: none;
+}
+
+@media (max-width: 767px) {
+    .text__image {
+        width: 80% !important;
+    }
+}
+
+.f-ryu {
+    font-family: a-otf-ryumin-pr6n, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.f-maru {
+    font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.f-vdl-l {
+    font-family: vdl-v7gothic, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.f-vdl-b {
+    font-family: vdl-v7gothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.f-furu {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.f-a-otf {
+    font-family: a-otf-gothic-bbb-pr6n,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.f-kozuka-h {
+    font-family: kozuka-gothic-pr6n, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*DIN*/
+
+@font-face {
+    font-family: 'DINPro Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local("DINPro Medium"), url("../fonts/DINPro-Medium tr.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'DINPro Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local("DINPro Light"), url("../fonts/DINPro-Light tr.woff") format("woff");
+}
+
+h3 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+.contents {
+    width: 1000px;
+    margin: auto;
+}
+
+.btns {
+    display: inline-block;
+    width: 240px;
+    height: 65px;
+    line-height: 65px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+.btns::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    top: 50%;
+    right: 17px;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+@media (max-width: 767px) {
+    .btns {
+        width: 190px;
+    }
+}
+
+.wrapper {
+    min-height: 100vh;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    html {
+        font-size: 2.84511vw;
+    }
+
+    .contents {
+        width: 90%;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .pc-dis {
+        display: none !important;
+    }
+
+    .sp {
+        display: block;
+    }
+}
